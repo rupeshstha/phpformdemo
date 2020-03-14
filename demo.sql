@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 11, 2020 at 09:51 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.3.13
+-- Generation Time: Mar 14, 2020 at 01:39 PM
+-- Server version: 10.1.32-MariaDB
+-- PHP Version: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -41,10 +41,17 @@ CREATE TABLE `products` (
   `sub_category` varchar(255) DEFAULT NULL,
   `featured_on` varchar(255) DEFAULT NULL,
   `other_details` varchar(255) DEFAULT NULL,
-  `image` text DEFAULT NULL,
+  `image` text,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `title`, `price`, `model_number`, `concept`, `category`, `available_size`, `available_color`, `details`, `sub_category`, `featured_on`, `other_details`, `image`, `created_at`, `updated_at`) VALUES
+(1, 'Sunt repudiandae ut ', '981', '986', 'Similique expedita n', 'Cillum impedit at v', 'Sed sunt recusandae', 'Et nisi et consectet', 'Eveniet nostrud mol', 'Nulla maiores dolore', 'Et fuga Tempora per', 'Ut amet sed adipisc', '70176239_711169079359614_6064616078196080640_n.jpg', '0000-00-00 00:00:00', NULL);
 
 --
 -- Indexes for dumped tables
@@ -64,7 +71,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
